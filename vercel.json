@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/data-deletion-status",
+      "destination": "/data-deletion-status.html"
+    }
+  ]
+}

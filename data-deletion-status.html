@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data deletion status</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.5; margin: 3rem auto; max-width: 40rem; padding: 0 1rem; }
+    code { background: #f2f2f2; border-radius: 0.25rem; padding: 0.15rem 0.3rem; }
+  </style>
+</head>
+<body>
+  <h1>Deletion request received</h1>
+  <p>Your data deletion request has been received.</p>
+  <p>Confirmation code: <code id="confirmation-code">Not provided</code></p>
+  <script>
+    const code = new URLSearchParams(window.location.search).get('code');
+    if (code) {
+      document.getElementById('confirmation-code').textContent = code;
+    }
+  </script>
+</body>
+</html>
